@@ -21,6 +21,9 @@ FROM python:3.11-slim
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
+# Ensure Python can import the `backend` package from the repository root
+ENV PYTHONPATH=/app
+
 # Runtime deps
 RUN apt-get update \
     && apt-get install -y --no-install-recommends libgomp1 curl \

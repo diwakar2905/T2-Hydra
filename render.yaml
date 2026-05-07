@@ -12,6 +12,7 @@ services:
         value: INFO
       - key: CORS_ORIGIN
         value: '*'
+    healthCheckPath: /health
 
   - type: web
     name: t2-hydro-frontend
