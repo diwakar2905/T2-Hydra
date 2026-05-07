@@ -34,4 +34,4 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 COPY . .
 
 # Default command (Render overrides with startCommand)
-CMD ["bash", "-lc", "gunicorn backend.app:app --bind 0.0.0.0:$PORT"]
+CMD ["bash", "-lc", "cd backend && gunicorn app:app --bind 0.0.0.0:$PORT"]
