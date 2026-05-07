@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from flask import Blueprint, jsonify, request
 
-from services.prediction_service import PredictionService
+from ..services.prediction_service import PredictionService
 
 predict_bp = Blueprint("predict", __name__)
 prediction_service = PredictionService()

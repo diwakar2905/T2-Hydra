@@ -7,7 +7,7 @@ from datetime import timedelta
 import numpy as np
 import pandas as pd
 
-from utils.feature_engineering import add_climate_features, classify_drought_score
+from ..utils.feature_engineering import add_climate_features, classify_drought_score
 
 
 class ForecastingService:

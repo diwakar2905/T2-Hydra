@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from flask import Blueprint, jsonify, request
 
-from services.explainability_service import ExplainabilityService
+from ..services.explainability_service import ExplainabilityService
 
 explain_bp = Blueprint("explain", __name__)
 explainability_service = ExplainabilityService()

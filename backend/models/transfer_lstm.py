@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from torch import nn
 
-from models.lstm_model import DroughtLSTM
+from .lstm_model import DroughtLSTM
 
 
 class TransferDroughtLSTM(nn.Module):

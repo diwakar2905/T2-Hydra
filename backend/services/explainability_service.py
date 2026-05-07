@@ -9,7 +9,7 @@ try:
 except ImportError:  # pragma: no cover - exercised only in minimal environments
     shap = None
 
-from services.prediction_service import PredictionService
+from .prediction_service import PredictionService
 
 
 class ExplainabilityService:

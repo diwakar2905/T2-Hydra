@@ -7,7 +7,7 @@ from dataclasses import asdict, dataclass
 
 import pandas as pd
 
-from utils.feature_engineering import MODEL_FEATURES, classify_drought_score, prepare_single_observation
+from ..utils.feature_engineering import MODEL_FEATURES, classify_drought_score, prepare_single_observation
 
 
 @dataclass(frozen=True)
