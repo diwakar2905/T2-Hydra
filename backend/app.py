@@ -9,10 +9,10 @@ from werkzeug.exceptions import HTTPException
 from flask import Flask, jsonify
 from flask_cors import CORS
 
-from config.settings import settings
-from routes.explain_routes import explain_bp
-from routes.forecast_routes import forecast_bp
-from routes.predict_routes import predict_bp
+from .config.settings import settings
+from .routes.explain_routes import explain_bp
+from .routes.forecast_routes import forecast_bp
+from .routes.predict_routes import predict_bp
 
 
 def create_app() -> Flask:
