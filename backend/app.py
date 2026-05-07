@@ -30,6 +30,10 @@ def create_app() -> Flask:
     def health():
         return jsonify({"status": "ok", "service": settings.app_name, "environment": settings.environment})
 
+    @app.get("/")
+    def index():
+        return jsonify({"status": "ok", "service": settings.app_name, "message": "T2-HYDRO backend"})
+
     @app.errorhandler(Exception)
     def handle_exception(error: Exception):
         """Return JSON for HTTP exceptions and a 500 for others.
