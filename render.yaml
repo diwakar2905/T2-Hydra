@@ -2,6 +2,7 @@ services:
   - type: web
     name: t2-hydro-backend
     env: python
+    runtime: python-3.11
     branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn backend.app:app
@@ -16,6 +17,7 @@ services:
   - type: web
     name: t2-hydro-frontend
     env: python
+    runtime: python-3.11
     branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: streamlit run frontend/streamlit_app.py --server.port $PORT --server.address 0.0.0.0
