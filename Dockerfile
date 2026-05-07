@@ -10,6 +10,9 @@ RUN apt-get update \
 
 # Upgrade pip and install requirements into the image
 COPY requirements.txt ./requirements.txt
+# Also copy service-level requirements so -r references resolve
+COPY backend/requirements.txt backend/requirements.txt
+COPY frontend/requirements.txt frontend/requirements.txt
 RUN python -m pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
